@@ -9,3 +9,15 @@ print(myText)
 myText1 = '{0} is easier than {1}'.format('Python', 'Java')
 print(myText1)
 print('{0} is my country. All {0}ns are my brothers and sisters'.format('India').count('India'))
+
+myString = 'superman'
+print(myString.endswith('man'))
+print(myString.endswith('man', 3))
+print(myString.endswith('man', 2, 6))
+print(myString.endswith(('man', 'ma'), 2, 6))
+print('Postman'.endswith(('man', 'ma'), 2, 6))
+
+print('Hello Good Morning'.find('Go'))
+print('Hello Good Morning'.find('Go', 4))
+print('Hello Good Morning'.find('Go', 4, 15))
+print('Hello Good Morning'.find('kk'))

@@ -89,9 +89,6 @@ x = re.findall(regex, myString)
 print(x)
 
 
-
-"""
-
 studentsAge = [18, 21, 23, 20, 21]
 print(studentsAge)
 print(studentsAge[2])
@@ -131,4 +128,111 @@ studentName.sort()
 print(studentName)
 
 print(studentName*3)
+
+
+#tuples are immutable
+months = ('Jan', 'Feb', 'Mar')
+print(months[0])
+print(months[-1])
+print(len(months))
+print('Jan' in months)
+print(months+months)
+print(months*3)
+
+
+myStudents = {'Abhi':1, 'Sibi':2}
+print(myStudents)
+myStudents = dict(Abhi=30, Sibi=28)
+print(myStudents)
+myStudents = dict({'Abhi':20, 'Sibi':10})
+print(myStudents)
+
+print(myStudents.get('Sibi'))
+print(myStudents.items())
+print(myStudents.keys())
+print(myStudents.values())
+
+
+months = {'Jan', 'Feb', 'Mar'}
+months = set(['Jan', 'Feb', 'Mar'])
+print(months)
+print(type(months))
+
+for i in months:
+    print(i)
+
+for i in months:
+    print(type(i))
+
+days = set()
+days.add('Mon')
+days.add('Tue')
+days.add('Wed')
+
+for i in days:
+    print(i)
+
+days.update(['Thur', 'Fri'])
+
+for i in days:
+    print(i)
+
+days.discard('Thur')
+print(days)
+
+
+months1 = {'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'}
+months2 = {'Mar', 'Apr', 'May', 'Feb'}
+months3 = {'Feb', 'Mar', 'Jun', 'Jul'}
+
+print(months1 > months2)
+print(months1 < months3)
+print(months2 == months3)
+print(months1 >= months2)
+print(months1 <= months2)
+
+months4frozen = frozenset({'Nov', 'Dec'})
+print(type(months4frozen))
+print(months4frozen)
+
+studName = input("Please enter your name:")
+studAge = int(input("Please enter your age:"))
+print("The student name is", studName, "and the age is", studAge)
+print("The student name is %s and the age is %d" %(studName, studAge))
+print("The student name is {} and the age is {}".format(studName, studAge))
+print('''Hello %s
+How are you''' %studName)
+print('You are over 20\nSo you are eligible')
+
+#Control flow statements
+#Conditional statements
+#If condition
+userInputNo = input('Enter either 1 or 2 :')
+if userInputNo == '1':
+    print('You entered 1')
+elif userInputNo == '2':
+    print('You entered 2')
+else:
+    print('Wrong input')
+
+#Inline if statement
+b = 12
+a = 12 if b == 10 else 13
+print(a)
+
+print('b is ten' if b == 10 else 'b is not 10')
+
+"""
+#Match case
+
+def http_status(status):
+    match status:
+        case 400:
+            return 'Bad request'
+        case 404:
+            return 'Page not found'
+        case _:
+            return 'Unknown error occured'
+
+print(http_status(404))
 

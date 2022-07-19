@@ -1,59 +1,59 @@
-month = input("Enter birth month:")
+month = input("Enter birth month no.:")
 
-if month == 'January':
-    print('Birthstone is Garnet')
-elif month == 'February':
-    print('Brithstone is Amethyst')
-elif month == 'March':
-    print('Brithstone is Aquamarine')
-elif month == 'April':
-    print('Brithstone is Diamond')
-elif month == 'May':
-    print('Brithstone is Emerald')
-elif month == 'June':
-    print('Brithstone is Alexandrite')
-elif month == 'July':
-    print('Brithstone is Ruby')
-elif month == 'August':
-    print('Brithstone is Peridot')
-elif month == 'September':
-    print('Brithstone is Sapphire')
-elif month == 'October':
-    print('Brithstone is Tourmaline')
-elif month == 'November':
-    print('Brithstone is Citrine')
-elif month == 'December':
-    print('Brithstone is Zircon')
+if month == '1':
+    print('Birthstone is Garnet\nPeople born in January are bold and alert.')
+elif month == '2':
+    print('Brithstone is Amethyst\nPeople born in February are lucky and loyal.')
+elif month == '3':
+    print('Brithstone is Aquamarine\nPeople born in March are naughty and genius.')
+elif month == '4':
+    print('Brithstone is Diamond\nPeople born in April are caring and strong.')
+elif month == '5':
+    print('Brithstone is Emerald\nPeople born in May are loving and pratical.')
+elif month == '6':
+    print('Brithstone is Alexandrite\nPeople born in June are romantic and curious.')
+elif month == '7':
+    print('Brithstone is Ruby\nPeople born in July are adventurous and honest.')
+elif month == '8':
+    print('Brithstone is Peridot\nPeople born in August are active and hardworking.')
+elif month == '9':
+    print('Brithstone is Sapphire\nPeople born in September are sensitive and pretty.')
+elif month == '10':
+    print('Brithstone is Tourmaline\nPeople born in October are stylish and friendly.')
+elif month == '11':
+    print('Brithstone is Citrine\nPeople born in November are nice and creative.')
+elif month == '12':
+    print('Brithstone is Zircon\nPeople born in December are confident and freedom loving.')
 else:
-    print('Wrong month name')
+    print('Wrong month no')
 
 def birthstone(month):
     match month:
-        case 'January':
-            return 'Birthstone is Garnet'
-        case 'February':
-            return 'Brithstone is Amethyst'
-        case 'March':
-            return 'Brithstone is Aquamarine'
-        case 'April':
-            return 'Brithstone is Diamond'
-        case 'May':
-            return 'Brithstone is Emerald'
-        case 'June':
-            return 'Brithstone is Alexandrite'
-        case 'July':
-            return 'Brithstone is Ruby'
-        case 'August':
-            return 'Brithstone is Peridot'
-        case 'September':
-            return 'Brithstone is Sapphire'
-        case 'October':
-            return 'Brithstone is Tourmaline'
-        case 'November':
-            return 'Brithstone is Citrine'
-        case 'December':
-            return 'Brithstone is Zircon'
+        case '1':
+            return 'Birthstone is Garnet\nPeople born in January are bold and alert'
+        case '2':
+            return 'Brithstone is Amethyst\nPeople born in February are lucky and loyal'
+        case '3':
+            return 'Brithstone is Aquamarine\nPeople born in March are naughty and genius'
+        case '4':
+            return 'Brithstone is Diamond\nPeople born in April are caring and strong'
+        case '5':
+            return 'Brithstone is Emerald\nPeople born in May are loving and pratical'
+        case '6':
+            return 'Brithstone is Alexandrite\nPeople born in June are romantic and curious.'
+        case '7':
+            return 'Brithstone is Ruby\nPeople born in July are adventurous and honest'
+        case '8':
+            return 'Brithstone is Peridot\nPeople born in August are active and hardworking'
+        case '9':
+            return 'Brithstone is Sapphire\nPeople born in September are sensitive and pretty'
+        case '10':
+            return 'Brithstone is Tourmaline\nPeople born in October are stylish and friendly'
+        case '11':
+            return 'Brithstone is Citrine\nPeople born in November are nice and creative'
+        case '12':
+            return 'Brithstone is Zircon\nPeople born in December are confident and freedom loving'
         case _:
-            return 'Wrong month name'
+            return 'Wrong month no'
 
 print(birthstone(month))

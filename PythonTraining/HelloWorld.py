@@ -222,7 +222,7 @@ print(a)
 
 print('b is ten' if b == 10 else 'b is not 10')
 
-"""
+
 #Match case
 
 def http_status(status):
@@ -235,4 +235,47 @@ def http_status(status):
             return 'Unknown error occured'
 
 print(http_status(404))
+
+
+#Looping
+#For loop
+
+fruits = ['apples', 'oranges', 'banana', 'cherry']
+
+for i in fruits:
+    print(i)
+
+for i, j in enumerate(fruits):
+    print(i, j)
+
+for i in range(10):
+    print(i)
+
+
+#while loop
+
+counter = 5
+while counter > 0:
+    print("Counter =", counter)
+    counter = counter - 1
+
+#break and continue
+
+j = 0
+for i in range(5):
+    j = j + 2
+    print('i = ', i, ', j = ',j)
+    if j == 6:
+        break
+
+j = 0
+for i in range(5):
+    j = j + 2
+    print('i = ', i, ', j = ', j)
+    if j == 6:
+        continue
+    print('j value is ', j)
+
+"""
+
 

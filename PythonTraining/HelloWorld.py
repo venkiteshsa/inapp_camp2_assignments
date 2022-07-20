@@ -299,15 +299,13 @@ def calculations(a, b):
     add = a + b
     sub = a - b
     mul = a * b
-    div = a / b
+    div = a % b
     return(add, sub, mul, div)
 output = calculations(40, 30)
 print("Addition = ", output[0])
 print("Subtraction = ", output[1])
 print("Multiplication = ", output[2])
 print("Division = ", output[3])
-
-"""
 
 def calculate(a, b):
     add = a + b
@@ -320,3 +318,49 @@ def calculate(a, b):
     yield div
 for value in calculate(40, 30):
     print(value)
+
+message1 = "I am a global variable"
+def myFunction():
+    global message1
+    print("\n Inside the function")
+    #global variables are accessible inside a function
+    print(message1)
+    message2 = "I am a local variable"
+    print(message2)
+    message1 = "Just modifying the global variable"
+
+myFunction()
+print("\n Outside the function")
+print(message1)
+#print(message2)
+
+
+def make_pizza(size, *toppings):
+    print(f"\nMaking a {size} - inch pizza with toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers')
+
+
+
+def printme(str):
+    "This prints a passed string into this function"
+    print(str)
+    return
+
+printme(str="test")
+
+def printinfo(name, age):
+    print(f"{name}, {age}")
+
+printinfo("Tom", 10)
+printinfo(age=10, name="Rob")
+
+sum = lambda arg1, arg2: arg1 + arg2
+
+print("Value of total :", sum(10, 20))
+print("Value of total :", sum(20, 20))
+
+"""

@@ -364,3 +364,56 @@ print("Value of total :", sum(10, 20))
 print("Value of total :", sum(20, 20))
 
 """
+
+#rights of a function in python is similar to the rights of a variable
+
+#1. we can assign a funtion to variable
+def myFunc1():
+    print("This is function 1")
+
+myMyFunction = myFunc1
+myFunc1()
+myMyFunction()
+
+
+#2. we can pass a function to another function
+def myFunc2(receivedfn):
+    receivedfn()
+    receivedfn()
+
+myFunc2(myFunc1)
+
+#3. we can return a function from another function
+def returnToUpperFn():
+    return str.upper
+
+upperRef = returnToUpperFn()
+print(upperRef("hello world"))
+
+#4. we can define a funtion inside another function
+
+def outer():
+    print("outer function")
+
+    def firstInner():
+        print("first inner function")
+    
+    def secondInner():
+        print("second inner function")
+    
+    firstInner()
+    secondInner()
+
+outer()
+
+#5. the inner function can access the enclosing function variables
+def myOuter(myGreeting):
+    print("The outer function says", myGreeting)
+
+    def myFirstInnerFunc():
+        print("The first inner function says", myGreeting)
+    
+    return myFirstInnerFunc
+
+myOuterFunctionVariable = myOuter("Peace to the world")
+myOuterFunctionVariable()

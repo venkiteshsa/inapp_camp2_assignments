@@ -363,7 +363,6 @@ sum = lambda arg1, arg2: arg1 + arg2
 print("Value of total :", sum(10, 20))
 print("Value of total :", sum(20, 20))
 
-"""
 
 #rights of a function in python is similar to the rights of a variable
 
@@ -417,3 +416,26 @@ def myOuter(myGreeting):
 
 myOuterFunctionVariable = myOuter("Peace to the world")
 myOuterFunctionVariable()
+
+
+#python decorators - a function that accpets another function, enhance it with a wrapper function
+#and return the enhanced function back
+
+def myDecorator(myFunc):
+    def innerWrapper():
+        print("Before the function call")
+        myFunc()
+        print("After the function call")
+    
+    return innerWrapper
+
+@myDecorator
+def myFnToPass():
+    print("Passing into decorator and printing")
+
+#myDecoratorDemo = myDecorator(myFnToPass)
+#myDecoratorDemo()
+
+myFnToPass()
+
+"""

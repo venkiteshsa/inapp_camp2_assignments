@@ -1,6 +1,3 @@
-import sys
-from tkinter.ttk import Separator
-import re
 """
 print('Hello world')
 print(sys.version)
@@ -418,10 +415,15 @@ myOuterFunctionVariable = myOuter("Peace to the world")
 myOuterFunctionVariable()
 
 
+"""
+
 #python decorators - a function that accpets another function, enhance it with a wrapper function
 #and return the enhanced function back
 
+import functools
+
 def myDecorator(myFunc):
+    @functools.wraps(myFunc)
     def innerWrapper():
         print("Before the function call")
         myFunc()
@@ -430,12 +432,9 @@ def myDecorator(myFunc):
     return innerWrapper
 
 @myDecorator
-def myFnToPass():
-    print("Passing into decorator and printing")
+def myNewFnToPassIntoDecorator():
+    print("A new simple function to pass into decorator")
 
-#myDecoratorDemo = myDecorator(myFnToPass)
-#myDecoratorDemo()
-
-myFnToPass()
-
-"""
+myNewFnToPassIntoDecorator()
+print(myNewFnToPassIntoDecorator.__name__)
+help(myNewFnToPassIntoDecorator)

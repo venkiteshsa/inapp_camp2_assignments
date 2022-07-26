@@ -1,12 +1,8 @@
-import numbers
+
 import os
 import re
-from tkinter.font import ROMAN
-#
-#print(os.getcwd())
-#os.chdir('Contacts')
-#print(os.getcwd())
-#myFile = open("contacts.txt", "w")
+
+
 def init():
     if not os.path.exists('Contacts'):
         os.mkdir('Contacts')

@@ -15,7 +15,7 @@ else:
     print('Division completed and result is', div)
 finally:
     print('I will run whatever happens')
-"""
+
 
 try:
     f = open('nonexistingfile.txt')
@@ -27,3 +27,43 @@ try:
         f.close()
 except:
     print('Some problem with opening the file')
+
+
+x = 0
+if x == 0:
+    raise Exception("Sorry, zero is not allowed")
+
+x = "Hello world"
+if not type(x) is int:
+    raise TypeError("Only numbers are allowed")
+"""
+
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return(repr(self.value))
+
+try:
+    x = 0
+    if x == 0:
+        raise(MyError("The number is Zero!!"))
+except MyError as error:
+    print("A new Exception occured:", error.value)
+
+print("hello")
+
+class MyError(Exception):
+    pass
+
+class DividebyZero(MyError):
+    pass
+
+try:
+    x = 0
+    if x == 0:
+        raise DividebyZero
+except DividebyZero:
+    print("A new Exception occured")
+
+print("hello")
